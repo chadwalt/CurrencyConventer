@@ -1,0 +1,23 @@
+.currency {
+    width: 131px;
+    height: 30px;
+}
+
+.currency-amount {
+    height: 25px;
+}
+
+.icon {
+    font-weight: bold;
+}
+
+.convert-button {
+    position: absolute;
+    left: 250px;
+    top: 140px;
+    width: 100px;
+    height: 39px;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #F7F7F7;
+}
