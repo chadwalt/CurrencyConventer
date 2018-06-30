@@ -1,0 +1,14 @@
+{
+    "name": "Currency Converter",
+    "short_name": "Currency Converter",
+    "display": "minimal-ui",
+    "start_url": "/",
+    "theme_color": "#673ab6",
+    "background_color": "#111111",
+    "icons": [{
+            "src": "icons/money.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ]
+}
