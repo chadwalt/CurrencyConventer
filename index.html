@@ -12,15 +12,15 @@
     <main>
         <h1>Welcome to Chad's Currency Conventer</h1>
 
-        <input class="currency-amount" />
-        <select class="currency"></select>
+        <input class="currency-amount" id="from_currency_amount"/>
+        <select class="currency" id="from_currency" ></select>
 
-        <i class="icon"> = </i>
+        <i class="icon"> => </i>
 
-        <input class="currency-amount" />
-        <select class="currency"></select>
+        <input class="currency-amount" id="to_currency_amount" readonly/>
+        <select class="currency" id="to_currency"></select>
 
-        <button class="convert-button">Convert</button>
+        <button class="convert-button" onclick="convert()">Convert</button>
 
     </main>
 </body>
