@@ -30,10 +30,25 @@ convert = () => {
     let url = convert_url + query;
 
     fetch(url)
-    .then(response => response.json())
-    .then(result => {
-        let rate = Number(Object.values(result)[0]);
-        to_currency_amount.value = (rate * from_currency_amount).toFixed(2);
+        .then(response => response.json())
+        .then(result => {
+            let rate = Number(Object.values(result)[0]);
+            to_currency_amount.value = (rate * from_currency_amount).toFixed(2);
+        })
+        .catch(error => console.log(error))
+}
+
+/**
+ * Check if the browser supports service workers and if so,
+ * Install the servie worker.
+ */
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service worker installed', registration.scope)
+        }, error => {
+            console.log('ServiceWorker not installed', error)
+        })
     })
-    .catch(error => console.log(error))
+
 }
